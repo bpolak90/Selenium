@@ -24,13 +24,29 @@ class Page():
 	def close(self):
 		self.driver.close()
 		
-	def find_element(self,loc):
-		return self.driver.find_element(loc)
+	def find_element(self,*loc):
+		return self.driver.find_element(*loc)
 	
 	def hover(self,loc):
 		ActionChains(self.driver).move_to_element(loc).perform()
 	
 	def click(self,loc):
-		self.driver.click(loc)
+		loc.click()
+
+def rgba2hex(rgba):
+	temp=rgba[5:-1]
+	temp=eval(temp)
+	RGB='#{0:02x}{1:02x}{2:02x}'.format(temp[0], temp[1], temp[2])
+	return RGB
+
+def assertion(el1, el2, msg):
+	try:
+		assert el1 in el2
+	except AssertionError:
+		print(msg)
+	except TypeError:
+		print('Zly typ argumentu')
 	
+if __name__=='__main__':
+	rgba2hex('rgba(0, 33, 12, 1)')
 		

@@ -9,6 +9,6 @@ Feature: Otwarcie strony g³ównej
 	
 	Scenario: Dzia³anie przycisku przekierujacego na strone fejsika sklepu
 		When: Najade na logo fejsika myszka
-		Then: Logo sie podswietli
-		When: Klikne w nie
-		Then: Przekieruje mnie na strone fejsbooka sklepu ktora otworzy sie w nowej karcie
+		Then: Logo sie podswietli (zmieni kolor)
+		And: Klikne w nie
+		And: Przekieruje mnie na strone fejsbooka sklepu ktora otworzy sie w nowej karcie
