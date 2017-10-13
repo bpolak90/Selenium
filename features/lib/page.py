@@ -6,6 +6,7 @@ class Page():
 	def __init__(self,driver,URL='http://automationpractice.com/index.php'):
 		self.driver=driver
 		self.URL=URL
+		self.driver.maximize_window()
 	
 	def get_url(self):
 		return self.driver.getCurrentURL()
