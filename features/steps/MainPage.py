@@ -16,7 +16,6 @@ def step_imp(driver):
     time.sleep(15)
     color2=fb_but.value_of_css_property('color')
     color2=rgba2hex(color2)
-    print(color2)
     assertion(color2, '#ffffff', 'Nieprawidlowy kolor przycisku po najechaniu na niego')
     test.click(fb_but)
     time.sleep(10)
